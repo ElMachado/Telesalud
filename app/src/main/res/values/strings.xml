@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Telesalud</string>
+    <string name="telesalud">Telesalud</string>
+    <string name="nombres">Nombres</string>
+    <string name="registro">Registro</string>
+    <string name="apellidos">Apellidos</string>
+    <string name="numero_de_tel_fono">Numero de teléfono</string>
+    <string name="correo_electr_nico">Correo electrónico</string>
+    <string name="fecha_de_nacimiento">Fecha de nacimiento</string>
+    <string name="registrarse">Registrarse</string>
+    <string name="iniciar_sesi_n">Iniciar sesión</string>
+    <string name="usuario">Usuario</string>
+    <string name="contrase_a">Contraseña</string>
+    <string name="desea_registrarse">¿desea registrarse?</string>
+    <string name="tienes_una_cuenta_inicia_ses_on">¿tienes una cuenta? Inicia sesíon.</string>
+    <string name="el_tiempo_se_va">El tiempo se va ....</string>
 </resources>
