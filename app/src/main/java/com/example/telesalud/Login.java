@@ -19,4 +19,9 @@ public void Registro(View view){
         super.startActivity(Registro);
     }
 
+    public void MainActivity(View view){
+        Intent MainActivity = new Intent(this,MainActivity.class);
+        super.startActivity(MainActivity);
+    }
+
 }

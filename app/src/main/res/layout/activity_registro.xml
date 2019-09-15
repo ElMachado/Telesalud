@@ -119,6 +119,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/cutive"
         android:text="@string/telesalud"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -133,7 +134,11 @@
         android:id="@+id/button2"
         android:layout_width="333dp"
         android:layout_height="49dp"
+        android:background="@color/colorPrimary"
+        android:fontFamily="monospace"
         android:text="@string/registrarse"
+        android:textColor="#FAF8F8"
+        android:typeface="monospace"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.474"
@@ -146,13 +151,14 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="monospace"
         android:onClick="Login"
-        android:text="¿tienes una cuenta? Inicia sesíon"
+        android:text="@string/tienes_una_cuenta_inicia_ses_on"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.91"
-        tools:text="¿tienes una cuenta? Inicia sesíon" />
+        tools:text="¿tienes una cuenta? Inicia sesíon." />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
