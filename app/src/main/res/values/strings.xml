@@ -14,4 +14,15 @@
     <string name="desea_registrarse">¿desea registrarse?</string>
     <string name="tienes_una_cuenta_inicia_ses_on">¿tienes una cuenta? Inicia sesíon.</string>
     <string name="el_tiempo_se_va">El tiempo se va ....</string>
+    <string name="contactos">Contactos</string>
+    <string name="contatos">Contatos</string>
+    <string name="string_contactar">Contactar2</string>
+    <string name="cargo">Cargo</string>
+    <string name="horario_de_atencion">Horario de atencion</string>
+    <string name="contactar">Contactar</string>
+    <string name="nombre_doctor">Nombre Doctor</string>
+    <string name="todo">TODO</string>
+    <string name="perfil_3">perfil_3</string>
+    <string name="perfil_2">perfil_2</string>
+    <string name="perfil_1">perfil_1</string>
 </resources>

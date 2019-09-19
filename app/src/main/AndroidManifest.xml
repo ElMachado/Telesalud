@@ -14,6 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".Contactos"/>
         <activity android:name=".Registro" />
         <activity android:name=".Login">
             <intent-filter>
