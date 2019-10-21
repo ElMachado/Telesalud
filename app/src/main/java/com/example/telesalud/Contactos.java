@@ -16,7 +16,7 @@ public class Contactos extends AppCompatActivity {
     }
 
 
-        String number = "573215092212";
+        String number = "573166236814";
 
         public void contactar(View view) {
             String url = "https://api.whatsapp.com/send?phone=" + number;

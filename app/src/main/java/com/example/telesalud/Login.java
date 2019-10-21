@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.net.Uri;
+
 public class Login extends AppCompatActivity {
 
         @Override
@@ -23,4 +23,6 @@ public class Login extends AppCompatActivity {
         Intent MainActivity=new Intent(this,MainActivity.class);
         super.startActivity(MainActivity);
         }
+
+
 }
