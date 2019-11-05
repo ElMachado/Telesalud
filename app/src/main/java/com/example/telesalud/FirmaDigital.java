@@ -1,7 +1,5 @@
 package com.example.telesalud;
 
-import android.app.AlertDialog;
-
 import java.io.UnsupportedEncodingException;
 import java.security.InvalidKeyException;
 import java.security.KeyPair;

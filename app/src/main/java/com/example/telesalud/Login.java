@@ -20,7 +20,7 @@ public class Login extends AppCompatActivity {
         }
 
         public void MainActivity(View view){
-        Intent MainActivity=new Intent(this,MainActivity.class);
+        Intent MainActivity=new Intent(this,Formulario.class);
         super.startActivity(MainActivity);
         }
 }
