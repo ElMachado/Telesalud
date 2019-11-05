@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    tools:context=".Formulario">
+
+    <LinearLayout
+        android:id="@+id/formulario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/background_light"
+        android:orientation="vertical"
+        tools:context=".Formulario">
+
+
+        <TextView
+            android:id="@+id/primer_nombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="monospace"
+            android:text="Primer nombre"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/primer_nombre1"
+            android:layout_width="301dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:fontFamily="monospace" />
+        <TextView
+            android:id="@+id/segundo_nombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="monospace"
+            android:text="Segundo nombre"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/segundo_nombre2"
+            android:layout_width="301dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:fontFamily="monospace" />
+
+        <TextView
+            android:id="@+id/primer_apellido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="monospace"
+            android:text="Primer apellido"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/primer_apellido1"
+            android:layout_width="301dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:fontFamily="monospace" />
+        <TextView
+            android:id="@+id/segundo_apellido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="monospace"
+            android:text="Segundo nombre"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/segundo_apellido2"
+            android:layout_width="301dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:fontFamily="monospace" />
+
+        <TextView
+            android:id="@+id/tipo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="monospace"
+            android:text="Tipo de documento"
+            android:textSize="20sp" />
+        <Spinner
+
+            android:id="@+id/tipo1"
+            android:layout_width="301dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:fontFamily="monospace" />
+
+        <TextView
+            android:id="@+id/identificacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="monospace"
+            android:text="Numero de Identificacion"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/identificacion2"
+            android:layout_width="301dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:fontFamily="monospace" />
+        <TextView
+            android:id="@+id/nacimiento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="monospace"
+            android:text="Fecha de nacimiento (DD/MM/AAAA)"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/nacimiento2"
+            android:layout_width="301dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:fontFamily="monospace"
+            android:inputType="date" />
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="monospace"
+            android:text="Correo electrónico"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/email1"
+            android:layout_width="301dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:fontFamily="monospace" />
+        <TextView
+            android:id="@+id/ocupacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="monospace"
+            android:text="Ocupación u oficio"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/ocupacion1"
+            android:layout_width="301dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:fontFamily="monospace" />
+        <TextView
+            android:id="@+id/eps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="monospace"
+            android:text="EPS"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/eps1"
+            android:layout_width="301dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:fontFamily="monospace" />
+        <TextView
+            android:id="@+id/afiliacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="monospace"
+            android:text="Tipo de afiliación"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/afiliacion1"
+            android:layout_width="301dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:fontFamily="monospace" />
+        <TextView
+            android:id="@+id/usuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="monospace"
+            android:text="Tipo de usuario"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/usuario1"
+            android:layout_width="301dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:fontFamily="monospace" />
+
+        <TextView
+            android:id="@+id/direccion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="monospace"
+            android:text="Dirección"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/direccion1"
+            android:layout_width="301dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:fontFamily="monospace" />
+        <TextView
+            android:id="@+id/telefono"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="monospace"
+            android:text="Teléfono"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/telefono1"
+            android:layout_width="301dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:fontFamily="monospace" />
+        <TextView
+            android:id="@+id/vivienda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="monospace"
+            android:text="Tipo de vivienda"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/vivienda1"
+            android:layout_width="301dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:fontFamily="monospace" />
+        <TextView
+            android:id="@+id/zona"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="monospace"
+            android:text="Zona"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/zona1"
+            android:layout_width="301dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:fontFamily="monospace" />
+        <TextView
+            android:id="@+id/departamento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="monospace"
+            android:text="Departamento"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/departamento1"
+            android:layout_width="301dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:fontFamily="monospace" />
+
+    </LinearLayout>
+
+
+</ScrollView>
