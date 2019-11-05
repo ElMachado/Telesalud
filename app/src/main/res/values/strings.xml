@@ -25,4 +25,11 @@
     <string name="perfil_3">perfil_3</string>
     <string name="perfil_2">perfil_2</string>
     <string name="perfil_1">perfil_1</string>
+    <string name="registrar_datos">Registrar datos</string>
+    <string name="imgregistrodatos">imgRegistroDatos</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="configuraciones">configuraciones</string>
+    <string name="button">Button</string>
 </resources>
