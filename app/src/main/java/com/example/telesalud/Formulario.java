@@ -15,16 +15,16 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
     public class Formulario extends AppCompatActivity {
-    private final static String[] opciones_identificacion = { "Cédula de ciudadanía", "Cédula de extranjería", "Tarjeta de identidad", "Aquí otro" };
-    private final static String[] opciones_eps = { "Sura", "Cafe salud", "Sumimedical", "Aquí otro" };
-    private final static String[] opciones_ocupacion = { "Estudiante", "Ama de casa", "Aquí otro"};
-    private final static String[] opciones_afiliacion = { "Cotizante", "Beneficiario", "Adicional"};
-    private final static String[] opciones_usuario = { "Contributivo", "Subsidiado", "Vinculado", "Particular", "Otro"};
-    private final static String[] opciones_vivienda = { "Casa", "Apartamento", "Otro"};
-    private final static String[] opciones_zona = { "Rural", "Urbana"};
-    private final static String[] opciones_departamento = { "Antioquia", "Meta", "Aquí otra"};
-    private final static String[] opciones_antioquia = { "Medellín", "Puerto Berrío", "Aquí otra"};
-    private final static String[] opciones_meta = { "Villavicencio", "Puerto López", "Aquí otra"};
+    private final static String[] opciones_identificacion = {"Seleccione", "Cédula de ciudadanía", "Cédula de extranjería", "Tarjeta de identidad", "Aquí otro" };
+    private final static String[] opciones_eps = { "Seleccione", "Sura", "Cafe salud", "Sumimedical", "Aquí otro" };
+    private final static String[] opciones_ocupacion = { "Seleccione", "Estudiante", "Ama de casa", "Aquí otro"};
+    private final static String[] opciones_afiliacion = { "Seleccione", "Cotizante", "Beneficiario", "Adicional"};
+    private final static String[] opciones_usuario = { "Seleccione", "Contributivo", "Subsidiado", "Vinculado", "Particular", "Otro"};
+    private final static String[] opciones_vivienda = { "Seleccione", "Casa", "Apartamento", "Otro"};
+    private final static String[] opciones_zona = { "Seleccione", "Rural", "Urbana"};
+    private final static String[] opciones_departamento = { "Seleccione", "Antioquia", "Meta", "Aquí otra"};
+    private final static String[] opciones_antioquia = { "Seleccione", "Medellín", "Puerto Berrío", "Aquí otra"};
+    private final static String[] opciones_meta = { "Seleccione", "Villavicencio", "Puerto López", "Aquí otra"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,17 +79,18 @@ import java.util.ArrayList;
 
                 if (departamento.equals("Antioquia")){
                     adapter_ciudad = adapter_antioquia;
+                    espacio.removeView(espacio.findViewWithTag(tipos_ciudad.getTag()));
                     tipos_ciudad.setAdapter(adapter_ciudad);
-                    adapter_ciudad.notifyDataSetChanged();
+                    espacio.addView(tipos_ciudad);
                 }
                 else if(departamento.equals("Meta")) {
                     adapter_ciudad = adapter_meta;
+                    espacio.removeView(espacio.findViewWithTag(tipos_ciudad.getTag()));
                     tipos_ciudad.setAdapter(adapter_ciudad);
-                    adapter_ciudad.notifyDataSetChanged();
+                    espacio.addView(tipos_ciudad);
                 }
                 if(espacio.findViewWithTag("texto_ciudad") == null){
                     espacio.addView(texto);
-
                 }
                 if(espacio.findViewWithTag("ciudad") == null){
                     espacio.addView(tipos_ciudad);
@@ -101,150 +102,6 @@ import java.util.ArrayList;
 
             }
         });
-        String [] si_no = {"Si","No"};
-        ArrayAdapter adapter_si_no = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, si_no);
-        String [] si_no_nosabe = {"Si", "No", "No sabe"};
-        ArrayAdapter adapter_si_no_nosabe = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, si_no_nosabe);
-        String [] grupo_sanguineo = {"0", "A", "B", "AB", "No sabe"};
-        ArrayAdapter adapter_grupo_sanguineo = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, grupo_sanguineo);
-        String [] negativo_positivo_nosabe = {"Negativo", "Positivo", "No sabe"};
-        ArrayAdapter adapter_negativo_positivo_nosabe = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, negativo_positivo_nosabe);
-        final String matriz [][] = {{"¿Embarazo planeado?","1", "si_no"},
-                            {"¿Fallo de anticonceptivo?","1", "si_no"},
-                            {"Grupo sanguineo","1", "grupo_sanguineo"},
-                            {"RH","1", "negativo_positivo_nosabe"},
-                            {"¿Recuerda peso antes del embarazo?","1", "si_no"},
-                            {"Peso","0", ""},
-                            {"Edad que llegó su primera regla","0", ""},
-                            {"¿Cirugías genitourinarias?","1", "si_no_nosabe"},
-                            {"¿Cuál cirugía?","0", ""},
-                            {"¿Infertilidad?","1", "si_no_nosabe"},
-                            {"¿Enfermedad pelvico inflamatoria?","1", "si_no_nosabe"},
-                            {"¿Cuál enfermerdad PelInf?","0", ""}};
-        LinearLayout.LayoutParams paramstitulo = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-        LinearLayout.LayoutParams paramsspinner = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-        paramsspinner.height = transform_dp(50);
-        paramsspinner.weight = transform_dp(301);
-        paramstitulo.setMargins(transform_dp(10),transform_dp(10),0,0);
-        for(int j = 0; j < 12; j++){
-            TextView titulo = new TextView(Formulario.this);
-            Spinner respuesta_sppiner = new Spinner(Formulario.this);
-            EditText respuesta_texto = new EditText(Formulario.this);
-            final int count = j;
-            titulo.setLayoutParams(paramstitulo);
-            titulo.setTypeface(Typeface.MONOSPACE);
-            titulo.setTextSize(20);
-            titulo.setText(matriz[j][0]);
-            titulo.setTag(matriz[j][0]);
-            respuesta_texto.setEms(10);
-            respuesta_texto.setLayoutParams(paramstitulo);
-            respuesta_texto.setTypeface(Typeface.MONOSPACE);
-            respuesta_texto.setTextSize(20);
-            respuesta_texto.setTag(matriz[j][0] + 2);
-            espacio.addView(titulo);
-            if(matriz[j][1].equals("1")){
-                respuesta_sppiner.setTag(matriz[j][0] + 1);
-                respuesta_sppiner.setLayoutParams(paramsspinner);
-                if(matriz[j][2].equals("si_no")){
-                    respuesta_sppiner.setAdapter(adapter_si_no);
-
-                }
-                else if(matriz[j][2].equals("si_no_nosabe")){
-                    respuesta_sppiner.setAdapter(adapter_si_no_nosabe);
-                }
-                else if(matriz[j][2].equals("negativo_positivo_nosabe")){
-                    respuesta_sppiner.setAdapter(adapter_negativo_positivo_nosabe);
-                }
-                else if(matriz[j][2].equals("grupo_sanguineo")){
-                    respuesta_sppiner.setAdapter(adapter_grupo_sanguineo);
-                }
-                espacio.addView(respuesta_sppiner);
-            }
-            else if(matriz[j][1].equals("0")){
-                espacio.addView(respuesta_texto);
-            }
-            if(j == 0){
-                respuesta_sppiner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                    @Override
-                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                        String si_no = (String) parent.getItemAtPosition(position);
-                        TextView aux_text = espacio.findViewWithTag(matriz[count+1][0]);
-                        Spinner aux = espacio.findViewWithTag(matriz[count+1][0] + 1);
-                        EditText aux_edit = espacio.findViewWithTag(matriz[count+1][0] + 2);
-                        if(si_no.equals("Si")){
-
-                            if(!(aux == null)){
-                                aux.setVisibility(View.GONE);
-                            }
-                            if(!(aux_edit == null)){
-                                aux_edit.setVisibility(View.GONE);
-                            }
-                            if(!(aux_text == null)){
-                                aux_text.setVisibility(View.GONE);
-                            }
-                        }
-                        else if(si_no.equals("No")){
-                            if(!(aux == null)){
-                                aux.setVisibility(View.VISIBLE);
-                            }
-                            if(!(aux_edit == null)){
-                                aux_edit.setVisibility(View.VISIBLE);
-                            }
-                            if(!(aux_text == null)){
-                                aux_text.setVisibility(View.VISIBLE);
-                            }
-                        }
-                    }
-
-                    @Override
-                    public void onNothingSelected(AdapterView<?> parent) {
-
-                    }
-
-                });
-            } else if (j == 4 || j == 7 || j == 10) {
-                respuesta_sppiner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                    @Override
-                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                        String si_no = (String) parent.getItemAtPosition(position);
-                        if(si_no.equals("No")){
-                            TextView aux_text = espacio.findViewWithTag(matriz[count+1][0]);
-                            Spinner aux = espacio.findViewWithTag(matriz[count+1][0] + 1);
-                            EditText aux_edit = espacio.findViewWithTag(matriz[count+1][0] + 2);
-                            if(!(aux == null)){
-                                aux.setVisibility(View.GONE);
-                            }
-                            if(!(aux_edit == null)){
-                                aux_edit.setVisibility(View.GONE);
-                            }
-                            if(!(aux_text == null)){
-                                aux_text.setVisibility(View.GONE);
-                            }
-                        }
-                        else if(si_no.equals("Si")){
-                            TextView aux_text = espacio.findViewWithTag(matriz[count+1][0]);
-                            Spinner aux = espacio.findViewWithTag(matriz[count+1][0] + 1);
-                            EditText aux_edit = espacio.findViewWithTag(matriz[count+1][0] + 2);
-                            if(!(aux == null)){
-                                aux.setVisibility(View.VISIBLE);
-                            }
-                            if(!(aux_edit == null)){
-                                aux_edit.setVisibility(View.VISIBLE);
-                            }
-                            if(!(aux_text == null)){
-                                aux_text.setVisibility(View.VISIBLE);
-                            }
-                        }
-                    }
-
-                    @Override
-                    public void onNothingSelected(AdapterView<?> parent) {
-
-                    }
-
-                });
-            }
-        }
     }
     private int transform_dp(int pixeles){
         int tamaño = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, pixeles, getResources().getDisplayMetrics());
